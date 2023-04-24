@@ -8,11 +8,7 @@ import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 
 /**
- * An example element.
- *
- * @fires count-changed - Indicates when the count changes
- * @slot - This element has a slot
- * @csspart button - The button
+ * An image web component example
  */
 @customElement('sb-image')
 export class SbImage extends LitElement {
@@ -38,9 +34,16 @@ export class SbImage extends LitElement {
   @property({type: String})
   size = '1200x400';
 
+  /**
+   * Blur property customized by input
+   */
+  @property({type: String})
+  _blur = '10';
+
   override render() {
     return html`
       <img .src=${this.useImageService(this.imageSrc)} />
+      <input type="text" placeholder="${this._blur}" @input=${this.updateBlur} />
     `;
   }
 
@@ -49,7 +52,12 @@ export class SbImage extends LitElement {
    * @param imageSrc The original image source
    */
   useImageService(imageSrc: string): string {
-    return `${imageSrc}/m/${this.size}`;
+    return `${imageSrc}/m/${this.size}/filters:blur(${this._blur})`;
+  }
+
+  private updateBlur(e: Event) {
+    const input = e.target as HTMLInputElement;
+    this._blur = `${input.value}`;
   }
 }
 
