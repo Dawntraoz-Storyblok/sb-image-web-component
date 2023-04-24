@@ -1,27 +1,27 @@
 ---
 layout: page.11ty.cjs
-title: <my-element> ⌲ Home
+title: <sb-image> ⌲ Home
 ---
 
-# &lt;my-element>
+# &lt;sb-image>
 
-`<my-element>` is an awesome element. It's a great introduction to building web components with LitElement, with nice documentation site as well.
+`<sb-image>` is an awesome element. It's a great introduction to building web components with LitElement, with nice documentation site as well.
 
 ## As easy as HTML
 
 <section class="columns">
   <div>
 
-`<my-element>` is just an HTML element. You can it anywhere you can use HTML!
+`<sb-image>` is just an HTML element. You can it anywhere you can use HTML!
 
 ```html
-<my-element></my-element>
+<sb-image></sb-image>
 ```
 
   </div>
   <div>
 
-<my-element></my-element>
+<sb-image></sb-image>
 
   </div>
 </section>
@@ -31,16 +31,16 @@ title: <my-element> ⌲ Home
 <section class="columns">
   <div>
 
-`<my-element>` can be configured with attributed in plain HTML.
+`<sb-image>` can be configured with attributed in plain HTML.
 
 ```html
-<my-element name="HTML"></my-element>
+<sb-image imageSrc="https://a.storyblok.com/f/39898/2250x1500/c15735a73c/demo-image-human.jpeg"></sb-image>
 ```
 
   </div>
   <div>
 
-<my-element name="HTML"></my-element>
+<sb-image imageSrc="https://a.storyblok.com/f/39898/2250x1500/c15735a73c/demo-image-human.jpeg"></sb-image>
 
   </div>
 </section>
@@ -50,17 +50,17 @@ title: <my-element> ⌲ Home
 <section class="columns">
   <div>
 
-`<my-element>` can be used with declarative rendering libraries like Angular, React, Vue, and lit-html
+`<sb-image>` can be used with declarative rendering libraries like Angular, React, Vue, and lit-html
 
 ```js
 import {html, render} from 'lit-html';
 
-const name = 'lit-html';
+const imageSrc = 'https://a.storyblok.com/f/39898/2250x1500/c15735a73c/demo-image-human.jpeg';
 
 render(
   html`
-    <h2>This is a &lt;my-element&gt;</h2>
-    <my-element .name=${name}></my-element>
+    <h2>This is a &lt;sb-image&gt;</h2>
+    <sb-image .imageSrc=${imageSrc}></sb-image>
   `,
   document.body
 );
@@ -69,8 +69,8 @@ render(
   </div>
   <div>
 
-<h2>This is a &lt;my-element&gt;</h2>
-<my-element name="lit-html"></my-element>
+<h2>This is a &lt;sb-image&gt;</h2>
+<sb-image imageSrc="https://a.storyblok.com/f/39898/2250x1500/c15735a73c/demo-image-human.jpeg"></sb-image>
 
   </div>
 </section>

@@ -1,20 +1,20 @@
 ---
 layout: example.11ty.cjs
-title: <my-element> ⌲ Examples ⌲ Basic
+title: <sb-image> ⌲ Examples ⌲ Basic
 tags: example
 name: Basic
 description: A basic example
 ---
 
 <style>
-  my-element p {
+  sb-image p {
     border: solid 1px blue;
     padding: 8px;
   }
 </style>
-<my-element>
+<sb-image>
   <p>This is child content</p>
-</my-element>
+</sb-image>
 
 <h3>CSS</h3>
 
@@ -28,7 +28,7 @@ p {
 <h3>HTML</h3>
 
 ```html
-<my-element>
+<sb-image>
   <p>This is child content</p>
-</my-element>
+</sb-image>
 ```
